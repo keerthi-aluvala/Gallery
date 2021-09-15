@@ -1,0 +1,13 @@
+{% extends "main/base.html" %}
+{% block content %}
+    
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{object.ImgURL}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+        <h4 class="card-title">{{object.ImgName}}</h4>
+        <p class="card-text">{{object.ImgDetails}}</p>
+        <a href="{% url 'post-update' object.id %}" class="btn btn-primary">Update</a>
+        <a href="{% url 'post-delete' object.id %}" class="btn btn-danger">Delete</a>
+    </div>
+
+{% endblock content %}
